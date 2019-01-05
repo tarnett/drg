@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Drain Right Gutters</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    
+    <asp:ContentPlaceHolder id="headContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="frmMain" runat="server">
+        <div class="container">
+            <br />
+            <nav class="navbar navbar-dark navbar-expand-md" style="color: white; height: 84px; background-color: #1A845C">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span></button>
+                <a class="navbar-brand" href="default.aspx"><span style="font-weight:600">DRAIN RIGHT GUTTERING</span></a>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto" style="font-size: 1.0em;">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="default.aspx"><span style='color:white'><i class="fa fa-fw fa-home fa-lg"></i>&nbsp;Home</span><span class="sr-only"></span></a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" runat="server"><span style='color: white'><i class="fa fa-dollar"></i>&nbsp;&nbsp;Time Slips</span></a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="transactions.aspx">New Time Slip</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navReports" data-toggle="dropdown" runat="server"><span style='color: white'><i class="fa fa-file-o"></i>&nbsp;&nbsp;Reports</span></a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="report_time_sheet.aspx">Weekly Time Sheet</a>
+                                <a class="dropdown-item" href="report_summary.aspx">Pay Period Summary</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown" id="navAdmin">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" runat="server" id="adminLink" visible="true"><span style='color: white'><i class="fa fa-wrench"></i>&nbsp;Administration</span></a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="installers.aspx">Manage Installers</a>
+                                <a class="dropdown-item" href="jobs.aspx">Manage Jobs</a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container-fluid">
+            <asp:ContentPlaceHolder id="masterContent" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+
+        
+
+    </form>
+</body>
+</html>
